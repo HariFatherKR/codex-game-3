@@ -280,3 +280,7 @@ When a PRD arrives:
 9. Stop only when Acceptance Criteria are met and Preview is green
 
 ---
+
+## 12) Character, Coin
+1. Character style 16bit gameboy style
+2. Coin is Black Cookie
