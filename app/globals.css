@@ -1,0 +1,145 @@
+:root {
+  color-scheme: only light;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0b0f1a;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  color: #f5f5f5;
+  touch-action: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.game-shell {
+  position: relative;
+  width: min(100vw, 56.25vh);
+  height: min(177.78vw, 100vh);
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(180deg, #5fb0ff 0%, #7dd1ff 45%, #f7f1d1 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hud {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hud-score {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.hud-highscore {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(9, 12, 22, 0.55);
+  text-align: center;
+  padding: 24px;
+}
+
+.panel {
+  background: rgba(16, 21, 34, 0.9);
+  border-radius: 20px;
+  padding: 20px 24px;
+  width: min(90%, 320px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.panel h1,
+.panel h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.panel p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.button-row {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.button {
+  min-height: 48px;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #ffd05a;
+  color: #171717;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: #2f6bff;
+  color: #fff;
+}
+
+.caption {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.share-toast {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  background: rgba(15, 20, 35, 0.85);
+  border-radius: 999px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.share-toast.visible {
+  opacity: 1;
+}
